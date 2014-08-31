@@ -70,6 +70,11 @@ int main (int argc, char *argv[])
 					}
 					else 
 					{				
+						if(size.empty())
+						{
+							std::cout << "Error - no data in first line" << std::endl;
+							exit (EXIT_FAILURE);
+						}
 						isNumeric(size);
 						lineCount = atoi(size.c_str());
 						wordCountArray = new int [lineCount];
@@ -100,6 +105,8 @@ int main (int argc, char *argv[])
 					else if ( currentChar == '\n' )
 					{
 						lineNumber++;
+					 std::cout << "lineNumber is now " << lineNumber << std::endl;
+						checkLineNumber(lineNumber, lineCount);
 						charLimit = 0;
 					}
 					else
@@ -107,7 +114,7 @@ int main (int argc, char *argv[])
 						std::cout << "Error - Non-Alphabetical or Whitespace character detected" << std::endl;
 						exit (EXIT_FAILURE);
 					}
-					checkLineNumber(lineNumber, lineCount);
+
 					prevChar = currentChar;
 				}
 			}
