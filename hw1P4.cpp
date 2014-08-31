@@ -57,7 +57,7 @@ int main (int argc, char *argv[])
 			int lineNumber = 0;
 			int charLimit = 0;
 			int * wordCountArray;
-			std::string size, remainingText;
+			std::string size;
 			bool numRead = false;
 			while ( text.get( currentChar ) )
 			{
