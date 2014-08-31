@@ -105,7 +105,7 @@ int main (int argc, char *argv[])
 					else if ( currentChar == '\n' )
 					{
 						lineNumber++;
-					 std::cout << "lineNumber is now " << lineNumber << std::endl;
+					 //std::cout << "lineNumber is now " << lineNumber << std::endl;
 						checkLineNumber(lineNumber, lineCount);
 						charLimit = 0;
 					}
