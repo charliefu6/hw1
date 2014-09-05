@@ -1,0 +1,29 @@
+Problem 1
+Part a:
+1. yes
+2. no
+3. yes
+4. no
+5. yes
+6. no
+Part b:
+Eclipse and Visual Studio (based off information from lab 2)
+Part c:
+3
+Part d:
+2
+Part e:
+3
+
+Problem 2
+Part a:
+1. Yes
+2. No
+3. Yes
+4. No
+5. No
+Part b:
+1. git add hw1q2b.cpp
+2. git log -p -3
+Part c:
+Git will request that you supply a message with your commit command. (-m)

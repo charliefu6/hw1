@@ -47,7 +47,8 @@ void put(int * bucket, int size, int* numbers)
 
 void empty(int * bucket, int * size)
 {
-	delete bucket;
+	delete []bucket;
+	bucket = NULL;
 	*size = 0;
 }
 
@@ -260,6 +261,7 @@ int main (int argc, char *argv[])
 									std::cout << "Error - extra data read in command lines." << std::endl;
 									exit(EXIT_FAILURE);
 								}
+							delete []entryValue;
 								//std::cout << sizeOfBucket[whichBucket-1] << std::endl;
 							}
 						}
@@ -268,6 +270,7 @@ int main (int argc, char *argv[])
 				}
 				iss.clear();
 				lineNumber++;
+				//std::cout << "lineexecuted" << std::endl;
 				//std::cout << lineNumber << " " << numOfLines << std::endl;
 			}
 			if (lineNumber-1 != numOfLines)
@@ -279,12 +282,12 @@ int main (int argc, char *argv[])
 			{
 				if(isEmpty[i]==false)
 				{
-					delete bucketArray[i];
+					delete []bucketArray[i];
 				}
 			}
-			delete isEmpty;
-			delete sizeOfBucket;
-			delete bucketArray;
+			delete []isEmpty;
+			delete []sizeOfBucket;
+			delete []bucketArray;
 		}
 	}
 	return 0;
